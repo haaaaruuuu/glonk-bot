@@ -13,9 +13,12 @@ A glonk is a hub of information that updates on a set interval.
 This uses dotenv to control credential variables. To use glonkbot, edit the values of the variables in the '.env' file.
 
 You'll need:
-Google API Key
-YouTube Channel ID e.g. https://www.youtube.com/channel/ >>> UCGzlNCXyzzaFYHIa_DlXs-w <<<
-Twitter API Key 
+
+`Google API Key`
+
+`YouTube Channel` ID e.g. https://www.youtube.com/channel/ >>> UCGzlNCXyzzaFYHIa_DlXs-w <<<
+
+`Twitter API Key` 
 
 You shouldn't have to mess with anything other than the '.env' file to have it working with your details.
 ### Prerequisites
