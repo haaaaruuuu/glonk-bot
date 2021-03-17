@@ -16,7 +16,7 @@ You'll need:
 
 `Google API Key`
 
-`YouTube Channel` ID e.g. https://www.youtube.com/channel/ >>> UCGzlNCXyzzaFYHIa_DlXs-w <<<
+`YouTube Channel ID` e.g. https://www.youtube.com/channel/ >>> UCGzlNCXyzzaFYHIa_DlXs-w <<<
 
 `Twitter API Key` 
 
