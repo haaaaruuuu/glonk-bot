@@ -7,6 +7,9 @@ import googleapiclient.errors
 import google_auth_oauthlib.flow
 import google_auth_httplib2
 
+# datetime
+import datetime
+
 # env
 import os
 from dotenv import load_dotenv
@@ -97,9 +100,16 @@ async def build_board():
                 ytdata2 = json.load(u)
                 
             vidtitle = ytdata2['items'][0]['snippet']['title']
+            
             viddesc = ytdata2['items'][0]['snippet']['description']
             strdesc = str(viddesc)
             strdesc = strdesc[:int(len(strdesc) * .10)]
+            
+            vidpub = ytdata2['items'][0]['snippet']['publishedAt']
+            vidpub = datetime.datetime.fromisoformat(vidpub[:10])
+            now = datetime.datetime.now()
+            daysago = str(now - vidpub)
+            
             vidthumb = ytdata2['items'][0]['snippet']['thumbnails']['standard']['url']
             vidurl = ytdata2['items'][0]['snippet']['resourceId']['videoId']
 
@@ -132,7 +142,7 @@ async def build_board():
             embed.add_field(name="Livestream Status", value=livevalue, inline=True)
             embed.add_field(name="Recent Tweet", value='\u200B', inline=False)
             embed.add_field(name='\u200B', value=linkval, inline=False)
-            embed.set_footer(text=" Sub Count: " + totalsubs + " | Total Views: " + totalviews + " | Last Uploaded: " + daysago + "d ago")
+            embed.set_footer(text=" Sub Count: " + totalsubs + " | Total Views: " + totalviews + " | Last Uploaded: " + daysago[:2] + "d ago")
         else:
             embed = error_embed()
     else:
