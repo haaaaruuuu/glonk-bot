@@ -18,8 +18,6 @@ You'll need:
 
 `YouTube Channel ID` e.g. https://www.youtube.com/channel/ >>> UCGzlNCXyzzaFYHIa_DlXs-w <<<
 
-`Twitter API Key` 
-
 You shouldn't have to mess with anything other than the '.env' file to have it working with your details.
 ### Prerequisites
 
@@ -38,10 +36,15 @@ See the bot in action in Glink's Discord Server: https://discord.gg/xtwYypf
 
 This will be a preview of the most recent version before a public update.
 ## To-do List
-Full exception/input error handling
+* Fetch tweets (will implement once Twitter accepts my dev app....)
 
-Cleaner way to concat 'link' value string
+* Full exception/input error handling
 
-Clean up logic
+* Cleaner way to concat 'link' value string
 
-Proper logging system
+* Clean up logic
+
+* Proper comprehensive logging system
+
+* Everything
+
