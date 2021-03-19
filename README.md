@@ -11,6 +11,8 @@ A glonk is a hub of information that updates on a set interval.
 
 ![](https://user-images.githubusercontent.com/77024043/111734908-427d8300-8838-11eb-82c9-93ab4d236919.png)
 
+Refreshes with your recent upload, livestream status, and more!
+
 
 ## Glonking
 This uses dotenv to control credential variables. To use glonkbot, edit the values of the variables in the '.env' file.
