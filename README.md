@@ -37,9 +37,6 @@ You shouldn't have to mess with anything other than the '.env' file to have it w
 haaaaruuuuu
 
 
-See the bot in action in Glink's Discord Server: https://discord.gg/xtwYypf
-
-This will be a preview of the most recent version before a public update.
 ## To-do List
 * Fetch tweets (will implement once Twitter accepts my dev app....)
 
