@@ -9,6 +9,9 @@ This project is my first exposure to python, rest api, etc. I simply just transl
 ## What is a glonk?
 A glonk is a hub of information that updates on a set interval.
 
+![](https://user-images.githubusercontent.com/77024043/111734908-427d8300-8838-11eb-82c9-93ab4d236919.png)
+
+
 ## Glonking
 This uses dotenv to control credential variables. To use glonkbot, edit the values of the variables in the '.env' file.
 
