@@ -21,7 +21,7 @@ You'll need:
 
 `Google API Key`
 
-`YouTube Channel ID` e.g. https://www.youtube.com/channel/ >>> UCGzlNCXyzzaFYHIa_DlXs-w <<<
+`YouTube Channel ID` e.g. https://www.youtube.com/channel/ >>> UC_x5XG1OV2P6uZZ5FSM9Ttw? <<<
 
 You shouldn't have to mess with anything other than the '.env' file to have it working with your details.
 ### Prerequisites
