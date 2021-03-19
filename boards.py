@@ -89,7 +89,6 @@ async def build_board():
             ytdata1 = json.load(x)
         
         if ytdata1['pageInfo']['totalResults'] > 0:
-            daysago = ""
             channelurl = ytdata1['items'][0]['id']
             channelname = ytdata1['items'][0]['snippet']['title']
             channelicon = ytdata1['items'][0]['snippet']['thumbnails']['default']['url']
@@ -100,17 +99,17 @@ async def build_board():
                 ytdata2 = json.load(u)
                 
             vidtitle = ytdata2['items'][0]['snippet']['title']
-            
+
             viddesc = ytdata2['items'][0]['snippet']['description']
             strdesc = str(viddesc)
             strdesc = strdesc[:int(len(strdesc) * .10)]
-            
+
             vidpub = ytdata2['items'][0]['snippet']['publishedAt']
             vidpub = datetime.datetime.fromisoformat(vidpub[:10])
             now = datetime.datetime.now()
             daysago = str(now - vidpub)
-            
-            vidthumb = ytdata2['items'][0]['snippet']['thumbnails']['standard']['url']
+
+            vidthumb = ytdata2['items'][0]['snippet']['thumbnails']['maxres']['url']
             vidurl = ytdata2['items'][0]['snippet']['resourceId']['videoId']
 
             with open('ytlive.json') as w:
@@ -140,7 +139,6 @@ async def build_board():
             embed.set_author(name=channelname, url="https://www.youtube.com/channel/" + channelurl, icon_url=channelicon)
             embed.set_thumbnail(url=vidthumb)
             embed.add_field(name="Livestream Status", value=livevalue, inline=True)
-            embed.add_field(name="Recent Tweet", value='\u200B', inline=False)
             embed.add_field(name='\u200B', value=linkval, inline=False)
             embed.set_footer(text=" Sub Count: " + totalsubs + " | Total Views: " + totalviews + " | Last Uploaded: " + daysago[:2] + "d ago")
         else:
